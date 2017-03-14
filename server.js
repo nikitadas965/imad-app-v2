@@ -17,7 +17,7 @@ var article = {
             qwerty  qwerty
         </p> `
 };
-function createTemplate(data) {
+function createTemplate (data) {
     var title=data.title;
     var date=data.date;
     var heading=data.heading;
@@ -70,7 +70,7 @@ app.get('/', function (req, res) {
 });
   
   app.get('/article-one.html' , function (req,res) {
-      res.send(createTemplate(ArticleOne));
+      res.send(createTemplate(articleone));
   });
       
   app.get('/article-two.html' , function (req,res) {
