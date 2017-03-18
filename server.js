@@ -83,7 +83,7 @@ return htmlTemplate;
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
-
+// we can only send string as a response
 var counter = 0;
 app.get('/counter' , function (req, res) {
     counter= counter + 1;
