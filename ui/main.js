@@ -16,7 +16,7 @@ button.onClick= function()
 
 counter= counter+1;
 var span= document.getElementById('count'); //selecting the span
-span.innerHtml= counter.toString();
+span.innerHTML= counter.toString();
 
 
      
