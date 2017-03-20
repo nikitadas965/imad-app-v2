@@ -15,8 +15,18 @@ request.onreadystatechange = function () {
        //take some action
         if(request.status === 200) {
            var counter = request.responseText;
-           var span = document.getElementById('count'); //selecting the span
-            span.innerHTML= counter.toString();
+            var names = request.responseText;
+            names = JSON.parse(names);
+            
+     var list = '';
+     for(var i=0; i< names.length; i++)
+     {
+         list += '<li>' + names[i] + '</li>';
+         
+     }
+     var ul = document.getElementById('namelist');
+     ul.innerHTML = list;
+          
        }
     }
     
@@ -25,7 +35,7 @@ request.onreadystatechange = function () {
 };
 
  // make the request
-   request.open('GET', 'http://nikitadas965.imad.hasura-app.io/counter' , true);
+   request.open('GET', 'http://nikitadas965.imad.hasura-app.io/submit-name?name' +name , true);
    request.send(null);
      
      
@@ -39,13 +49,5 @@ request.onreadystatechange = function () {
      
      // capture the names and render them as a list
      
-     var names = ['name1', 'name2', 'name3', 'name4'];
-     var list = '';
-     for(var i=0; i< names.length; i++)
-     {
-         list += '<li>' + names[i] + '</li>';
-         
-     }
-     var ul = document.getElementById('namelist');
-     ul.innerHTML = list;
+    
  };
