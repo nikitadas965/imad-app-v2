@@ -39,7 +39,7 @@ request.onreadystatechange = function () {
      
      // capture the names and render them as a list
      
-     var names = ['name1' , 'name2' , 'name3'];
+     var names = ['name1' , 'name2' , 'name3' , 'name4'];
      var list = '';
      for(var i=0; i<names.length; i++)
      {
