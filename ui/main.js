@@ -15,17 +15,10 @@ request.onreadystatechange = function () {
        //take some action
         if(request.status === 200) {
           
-            var names = request.responseText;
-            names = JSON.parse(names);
+            var counter = request.responseText;
+            var span = document.getElementById('count');
+            span.innerHTML = counter.toString();
             
-     var list = '';
-     for(var i=0; i< names.length; i++)
-     {
-         list += '<li>' + names[i] + '</li>';
-         
-     }
-     var ul = document.getElementById('namelist');
-     ul.innerHTML = list;
           
        }
     }
