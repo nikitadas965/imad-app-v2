@@ -14,7 +14,7 @@ request.onreadystatechange = function () {
      if(request.readyState === XMLHttpRequest.DONE)  {
        //take some action
         if(request.status === 200) {
-           var counter = request.responseText;
+          
             var names = request.responseText;
             names = JSON.parse(names);
             
@@ -35,7 +35,7 @@ request.onreadystatechange = function () {
 };
 
  // make the request
-   request.open('GET', 'http://nikitadas965.imad.hasura-app.io/submit-name?name' +name , true);
+   request.open('GET', 'http://nikitadas965.imad.hasura-app.io/submit-name?name' + name , true);
    request.send(null);
      
      
